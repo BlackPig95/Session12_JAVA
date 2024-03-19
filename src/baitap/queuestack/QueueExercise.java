@@ -18,10 +18,10 @@ public class QueueExercise
 //        bai7();
 //        bai9();
 //        bai11();
-//        bai12();
+        bai12();
 //        bai13();
 //        bai14();
-        bai15();
+//        bai15();
     }
 
     //        bai 1
@@ -273,15 +273,14 @@ public class QueueExercise
             arrayInt[i] = random.nextInt(10, 30);//Tạo mảng ban đầu
             System.out.print(arrayInt[i] + " ");
         }
-        Stack<Integer> stackInt = new Stack<>();
+        System.out.println();
+        Queue<Integer> queueInt = new PriorityQueue<>();
         for (int i = 0; i < arrayInt.length; i++)
         {
-            if (stackInt.isEmpty() || stackInt.peek() > arrayInt[i])
-            {
-                stackInt.push(arrayInt[i]);
-            }
+            queueInt.offer(arrayInt[i]);
         }
-        System.out.println("Phần tử lớn nhất: " + stackInt.peek());
+        System.out.println(queueInt);
+        System.out.println("Phần tử nhỏ nhất: " + queueInt.peek());
     }
 
     //bai 13 check descending
